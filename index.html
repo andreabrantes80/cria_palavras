@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jogo de Criação de Palavras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🎮 Jogo de Criação de Palavras</h1>
+
+    <div id="config">
+      <label for="dificuldade">Escolha a dificuldade:</label>
+      <select id="dificuldade">
+        <option value="facil">Fácil (60s)</option>
+        <option value="medio">Médio (45s)</option>
+        <option value="dificil">Difícil (30s)</option>
+      </select>
+      <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <div id="jogo" style="display: none">
+      <p><strong>Tempo restante:</strong> <span id="tempo">0</span> segundos</p>
+      <p><strong>Letras disponíveis:</strong> <span id="letras"></span></p>
+
+      <input type="text" id="entradaPalavra" placeholder="Digite uma palavra" />
+      <button onclick="verificarPalavra()">Verificar</button>
+
+      <p><strong>Pontuação:</strong> <span id="pontuacao">0</span></p>
+      <p>
+        <strong>Palavras corretas:</strong> <span id="palavrasCorretas"></span>
+      </p>
+    </div>
+    <div class="centralizar">
+      <div id="mensagem" class="mensagem"></div>
+      <div id="resultadoFinal" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
